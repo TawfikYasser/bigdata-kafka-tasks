@@ -8,12 +8,12 @@ import java.nio.file.Paths;
 
 
 /*
-* Remember to change the permission of kafkaPrdo.sh to write [chmod -x kafkaProd.sh]
+* Remember to change the permission of kafkaProd.sh to write [chmod -x kafkaProd.sh]
 *
 * */
 public class Driver {
     public static void main(String[] args) throws IOException {
-        String[] cmds = new String[] {"src/kafkaProd.sh"};
+        String[] cmds = new String[] {"/home/tawfik/Softy/HadoopWork/BigDataTask1/src/kafkaProd.sh"};
         ProcessBuilder processBuilder = new ProcessBuilder(cmds);
 
         Process process = processBuilder.start();
@@ -53,7 +53,7 @@ import java.io.InputStreamReader;
  * */
 public class Driver {
     public static void main(String[] args) throws IOException {
-        String[] cmds = new String[] {"src/kafkaCons.sh"};
+        String[] cmds = new String[] {"/home/tawfik/Softy/HadoopWork/BigDataTask1PartTwo/src/kafkaCons.sh"};
         ProcessBuilder processBuilder = new ProcessBuilder(cmds);
 
         Process process = processBuilder.start();
@@ -72,6 +72,12 @@ cd /home/tawfik/Softy/
 
 ./kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic tpt --from-beginning
 
+
+
+
+### to run in different terminals
+java -jar BigDataTask1.jar 
+java -jar BigDataTask1PartTwo.jar 
 
 
 
